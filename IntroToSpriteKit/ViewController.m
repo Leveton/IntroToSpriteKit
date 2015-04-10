@@ -150,28 +150,31 @@ static const uint32_t sceneCategory = 0x1 << 6;  // 0000000000000000000000000010
     SKPhysicsBody *firstBody;
     SKPhysicsBody *secondBody;
     
-    /* use the bitmask to determine which physics body is node0 since this method doesn't provide an order */
-    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
+    if (self.isFingerOnNode0)
     {
-        firstBody = contact.bodyA;
-        secondBody = contact.bodyB;
-    }
-    else
-    {
-        firstBody = contact.bodyB;
-        secondBody = contact.bodyA;
-    }
-    
-    if ((firstBody.categoryBitMask == node0Category && secondBody.categoryBitMask != sceneCategory) || (secondBody.categoryBitMask == node0Category && firstBody.categoryBitMask != sceneCategory))
-    {
-        [secondBody.node removeFromParent];
-        self.counter++;
-    }
-    
-    if (self.counter >= 5)
-    {
-        [self.label setText:@"GAME WON"];
-        return;
+        /* use the bitmask to determine which physics body is node0 since this method doesn't provide an order */
+        if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
+        {
+            firstBody = contact.bodyA;
+            secondBody = contact.bodyB;
+        }
+        else
+        {
+            firstBody = contact.bodyB;
+            secondBody = contact.bodyA;
+        }
+        
+        if ((firstBody.categoryBitMask == node0Category && secondBody.categoryBitMask != sceneCategory) || (secondBody.categoryBitMask == node0Category && firstBody.categoryBitMask != sceneCategory))
+        {
+            [secondBody.node removeFromParent];
+            self.counter++;
+        }
+        
+        if (self.counter >= 5)
+        {
+            [self.label setText:@"GAME WON"];
+            return;
+        }
     }
     
     if (![contact.bodyA.node.name isEqualToString:@"rect"])
