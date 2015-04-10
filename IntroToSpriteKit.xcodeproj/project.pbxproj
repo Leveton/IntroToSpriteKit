@@ -10,10 +10,10 @@
 		7AC71D2F1AD5962A00487E22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC71D2E1AD5962A00487E22 /* main.m */; };
 		7AC71D321AD5962A00487E22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC71D311AD5962A00487E22 /* AppDelegate.m */; };
 		7AC71D351AD5962A00487E22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC71D341AD5962A00487E22 /* ViewController.m */; };
-		7AC71D381AD5962A00487E22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC71D361AD5962A00487E22 /* Main.storyboard */; };
 		7AC71D3A1AD5962A00487E22 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AC71D391AD5962A00487E22 /* Images.xcassets */; };
 		7AC71D3D1AD5962A00487E22 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AC71D3B1AD5962A00487E22 /* LaunchScreen.xib */; };
 		7AC71D491AD5962B00487E22 /* IntroToSpriteKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC71D481AD5962B00487E22 /* IntroToSpriteKitTests.m */; };
+		7AC71D531AD5963A00487E22 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC71D521AD5963A00487E22 /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +34,12 @@
 		7AC71D311AD5962A00487E22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7AC71D331AD5962A00487E22 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7AC71D341AD5962A00487E22 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7AC71D371AD5962A00487E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7AC71D391AD5962A00487E22 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7AC71D3C1AD5962A00487E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7AC71D421AD5962B00487E22 /* IntroToSpriteKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntroToSpriteKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC71D471AD5962B00487E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AC71D481AD5962B00487E22 /* IntroToSpriteKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroToSpriteKitTests.m; sourceTree = "<group>"; };
+		7AC71D521AD5963A00487E22 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC71D531AD5963A00487E22 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +64,7 @@
 		7AC71D201AD5962A00487E22 = {
 			isa = PBXGroup;
 			children = (
+				7AC71D521AD5963A00487E22 /* SpriteKit.framework */,
 				7AC71D2B1AD5962A00487E22 /* IntroToSpriteKit */,
 				7AC71D451AD5962B00487E22 /* IntroToSpriteKitTests */,
 				7AC71D2A1AD5962A00487E22 /* Products */,
@@ -85,7 +87,6 @@
 				7AC71D311AD5962A00487E22 /* AppDelegate.m */,
 				7AC71D331AD5962A00487E22 /* ViewController.h */,
 				7AC71D341AD5962A00487E22 /* ViewController.m */,
-				7AC71D361AD5962A00487E22 /* Main.storyboard */,
 				7AC71D391AD5962A00487E22 /* Images.xcassets */,
 				7AC71D3B1AD5962A00487E22 /* LaunchScreen.xib */,
 				7AC71D2C1AD5962A00487E22 /* Supporting Files */,
@@ -199,7 +200,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC71D381AD5962A00487E22 /* Main.storyboard in Resources */,
 				7AC71D3D1AD5962A00487E22 /* LaunchScreen.xib in Resources */,
 				7AC71D3A1AD5962A00487E22 /* Images.xcassets in Resources */,
 			);
@@ -244,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7AC71D361AD5962A00487E22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7AC71D371AD5962A00487E22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7AC71D3B1AD5962A00487E22 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -414,6 +406,7 @@
 				7AC71D4E1AD5962B00487E22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7AC71D4F1AD5962B00487E22 /* Build configuration list for PBXNativeTarget "IntroToSpriteKitTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +415,7 @@
 				7AC71D511AD5962B00487E22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
