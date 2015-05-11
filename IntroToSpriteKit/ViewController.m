@@ -16,6 +16,7 @@ static const uint32_t node3Category = 0x1 << 3;  // 0000000000000000000000000000
 static const uint32_t node4Category = 0x1 << 4;  // 00000000000000000000000000010000
 static const uint32_t node5Category = 0x1 << 5;  // 00000000000000000000000000100000
 static const uint32_t sceneCategory = 0x1 << 6;  // 00000000000000000000000000100000
+static const uint32_t allCategory = UINT32_MAX;  // 00000000000000000000000000100000
 
 
 @interface ViewController ()<SKPhysicsContactDelegate>
@@ -40,6 +41,12 @@ static const uint32_t sceneCategory = 0x1 << 6;  // 0000000000000000000000000010
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"anInteger0: %ld", (long)node0Category);
+    NSLog(@"anInteger1: %ld", (long)node1Category);
+    NSLog(@"anInteger2: %ld", (long)node2Category);
+    NSLog(@"anInteger3: %ld", (long)node3Category);
+    NSLog(@"all: %ld", (long)allCategory);
     
     [self setUpLabel];
     
@@ -86,7 +93,7 @@ static const uint32_t sceneCategory = 0x1 << 6;  // 0000000000000000000000000010
     [self.spriteKitScene addChild:self.node0];
     
     
-    /* create 5 other nodes */
+    /* create 5 other nodes, you can usea loop here instead of hardcoding, but I didn't for teaching puposes */
     
     self.node1 = [self createSpriteNodeWithName:@"one"];
     self.node1.position = CGPointMake(arc4random() % maxWidth, arc4random() % maxHeight);
